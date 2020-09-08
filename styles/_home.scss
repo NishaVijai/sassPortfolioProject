@@ -1,0 +1,14 @@
+.home {
+  align-items: center;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url("../images/model-1.jpg") center top;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 40vh;
+  text-align: center;
+}

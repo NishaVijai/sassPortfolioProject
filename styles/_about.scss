@@ -1,0 +1,68 @@
+.about {
+  padding-bottom: 2rem;
+
+  &-bio-image {
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../images/model-1.jpg") center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // height: 50vh;
+    height: 80vh;
+    width: 100%;
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-bio {
+    text-align: center;
+    width: 80%;
+
+    .text-secondary {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .jobs {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    margin: 2rem 0 auto 0;
+    margin: 0 auto;
+    width: 60vw;
+
+    &-job {
+      background: lighten($primary-color, 10%);
+      border-bottom: 5px solid $secondary-color;
+      padding: 0.5rem;
+
+      h2,
+      h3 {
+        margin: 0.5rem 0;
+      }
+
+      h4 {
+        margin: 0.3rem 0;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  transform: rotate(90deg) translate(-3rem, -4rem);
+  -webkit-transform: rotate(90deg) translate(-3rem, -4rem);
+  -moz-transform: rotate(90deg) translate(-3rem, -4rem);
+  -ms-transform: rotate(90deg) translate(-3rem, -4rem);
+  -o-transform: rotate(90deg) translate(-3rem, -4rem);
+}

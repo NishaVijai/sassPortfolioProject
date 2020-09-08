@@ -1,0 +1,100 @@
+.projects {
+  padding-bottom: 2rem;
+
+  &-bio-image {
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../images/model-1.jpg") center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // height: 50vh;
+    height: 80vh;
+    width: 100%;
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-items {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+    margin: 2rem 0 auto 0;
+    margin: 0 auto;
+    width: 60vw;
+  }
+
+  &-item {
+    cursor: pointer;
+    position: relative;
+    border-bottom: 5px solid $secondary-color;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    &::after {
+      background: $secondary-color;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      @include transition-ease;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0.9;
+        top: 0;
+      }
+      .projects-button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-buttons {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &-button {
+    color: set-text-color($secondary-color);
+    opacity: 0;
+    @include transition-ease;
+
+    &:hover {
+      color: set-text-color(set-text-color($secondary-color));
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  transform: rotate(90deg) translate(-3rem, -4rem);
+  -webkit-transform: rotate(90deg) translate(-3rem, -4rem);
+  -moz-transform: rotate(90deg) translate(-3rem, -4rem);
+  -ms-transform: rotate(90deg) translate(-3rem, -4rem);
+  -o-transform: rotate(90deg) translate(-3rem, -4rem);
+}
